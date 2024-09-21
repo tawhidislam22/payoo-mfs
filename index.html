@@ -13,7 +13,7 @@
         <div class="mockup-phone">
             <div class="camera"></div>
             <div class="display">
-              <div class="artboard artboard-demo phone-1">
+              <div class="artboard artboard-demo phone-3">
                 <!-- balance available -->
                 <div class="stats shadow">
                     <div class="stat">
@@ -24,12 +24,14 @@
                   <div class="divider"></div>
                   <!-- balance add ,cash out button start -->
                   <div>
-                    <button class="btn btn-lg bg-purple-700">Add Money</button>
-                    <button class="btn btn-lg bg-purple-700">Cash out</button>
+                    <button id="add-money-show-from-btn" class="btn btn-lg bg-purple-700">Add Money</button>
+                    <button id="cash-out-show-from-btn" class="btn btn-lg bg-purple-700">Cash out</button>
+                    <button id="transaction-show-btn" class="btn btn-lg bg-purple-700">Transactions</button>
+
                   </div>
                   <div class="divider"></div>
                   <!-- add money from start here -->
-                  <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div id="add-money-from" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -49,7 +51,7 @@
                     </form>
                   </div>
                   <!-- cash out form start here -->
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div id="cash-out-from" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -68,11 +70,16 @@
                       </div>
                     </form>
                   </div>
+                  <div id="transaction-container" class="m-4 hidden space-y-2">
+                    <h2>Transaction details</h2>
+                  </div>
               </div>
             </div>
           </div>
     </main>
     <script src="./js/add-money.js"></script>
     <script src="./js/cash-out-money.js"></script>
+    <script src="./js/features.js"></script>
+    <script src="./js/utilities.js"></script>
 </body>
 </html>
